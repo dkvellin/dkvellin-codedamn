@@ -1,7 +1,4 @@
 import React from 'react';
-import {Header} from './components/Header';
-import {Footer} from './components/Footer';
-import Home from './components/pages/Home';
 
 const details = {
   headerTitle: 'React Application',
@@ -12,9 +9,7 @@ class App extends React.Component {
   render() {
     return(
       <div>
-        <Header details={details}/>
-        <Home num={5234}/>
-        <Footer details={details}/>
+        <h2>{details.headerTitle}</h2>
       </div>
     );
   }

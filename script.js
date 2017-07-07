@@ -7,9 +7,17 @@ import App from './app';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
+var todosList = ["Todo 1", "Todo 2"];
+
+const todos = localStorage.getItem('listOfTodos');
+
+if(todos) {
+  todosList = JSON.parse(todos);
+}
+
 ReactDOM.render(
   <MuiThemeProvider>
-    <App/>
+    <App tasks={todosList}/>
   </MuiThemeProvider>,
   document.getElementById('first-app')
 );
